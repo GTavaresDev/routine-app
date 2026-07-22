@@ -156,7 +156,7 @@ PORT=3000
 |---|---|
 | `npm run dev` | Inicia o servidor de desenvolvimento Next.js |
 | `npm run build` | Compila o projeto e gera a build de produção |
-| `npm run start` | Inicia o servidor com a build compilada |
+| `npm run start` ou `npm start` | Sobe o banco via Docker (`db:local:up`), abre o Prisma Studio (`http://localhost:5555`) e o servidor Next.js (`http://localhost:3000`) simultaneamente |
 | `npm run lint` | Executa a verificação estática do ESLint |
 | `npm run typecheck` | Executa a verificação de tipos do TypeScript (`tsc --noEmit`) |
 | `npm run test` | Executa a suíte de testes com Vitest |

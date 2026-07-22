@@ -6,7 +6,7 @@ export default function Dashbaord() {
         <p className="text-sm text-[var(--text-texto-secundario)] mb-4">
           App para controle de suas atividades e rotina.
         </p>
-        <div className="text-xs text-white bg-slate-100 dark:bg-slate-800 p-3 rounded font-mono">
+        <div className="text-xs text-white bg-slate-500 dark:bg-slate-800 p-3 rounded font-mono">
           Bem vindo
         </div>
       </div>

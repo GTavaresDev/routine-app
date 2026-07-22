@@ -15,6 +15,7 @@ model User {
   createdAt    DateTime        @default(now())
   updatedAt    DateTime        @updatedAt
   permission   UserPermission?
+  todo         Todo?
 
   @@map("user")
 }
@@ -28,4 +29,25 @@ model UserPermission {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("user_permission")
+}
+
+model Todo {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category  Category?
+
+  @@map("todo")
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  todoId    Int      @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  todo      Todo     @relation(fields: [todoId], references: [id], onDelete: Cascade)
+
+  @@map("category")
 }
