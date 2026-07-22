@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-fundo-geral: #F8FAFC;
+    --bg-cards: #FFFFFF;
+    --border-bordas: #E2E8F0;
+    --text-texto-principal: #111827;
+    --text-texto-secundario: #64748B;
+    --bg-success: #10B981;
+    --bg-error: #EF4444;
+  }
+
+  .dark {
+    --bg-fundo-geral: #0F172A;
+    --bg-cards: #1E293B;
+    --border-bordas: #334155;
+    --text-texto-principal: #F1F5F9;
+    --text-texto-secundario: #94A3B8;
+    --bg-success: #34D399;
+    --bg-error: #F87171;
+  }
+}
+
+body {
+  background-color: var(--bg-fundo-geral);
+  color: var(--text-texto-principal);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
